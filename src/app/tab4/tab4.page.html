@@ -1,9 +1,11 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>tab4</ion-title>
+  <ion-toolbar color="medium">
+    <ion-title>Scan</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+  <ion-button expand="full" (click)="scanBarcode()"> Scan </ion-button>
+  <p>Barcode data : {{barcodeText}}</p>
+  <p>Barcode format : {{barcodeFormat}}</p>
 </ion-content>

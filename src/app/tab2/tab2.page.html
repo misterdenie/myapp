@@ -1,9 +1,21 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header >
+  <ion-toolbar color="secondary">
     <ion-title>
-      Tab Two
+      News
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding>
+  <ion-list>
+      <ion-item *ngFor="let news of newsList.articles;">
+          <ion-thumbnail slot="start">
+            <img src="{{news.urlToImage}}">
+          </ion-thumbnail>
+          <ion-label>{{news.title}}<br>
+            <small>{{news.author}}</small>
+          </ion-label>
+         
+        </ion-item>
+  </ion-list>
+</ion-content>
